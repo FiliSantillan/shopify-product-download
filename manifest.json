@@ -1,0 +1,37 @@
+{
+    "name": "Shopify Product Download",
+    "description": "...",
+    "version": "1.0",
+    "manifest_version": 3,
+    "options_page": "options.html",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["tabs", "activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content-script.js"]
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": ["inject-script.js"],
+        "matches": ["<all_urls>"]
+    }],
+    "action": {
+        "default_popup": "popup.html",
+        "defaukt:title": "PerfWatch",
+        "default_icon": {
+            "16": "/images/shopify-product-download-16.png",
+            "32": "/images/shopify-product-download-32.png",
+            "48": "/images/shopify-product-download-48.png",
+            "128": "/images/shopify-product-download-128.png"
+        }
+    },
+    "icons": {
+    "16": "/images/shopify-product-download-16.png",
+    "32": "/images/shopify-product-download-32.png",
+    "48": "/images/shopify-product-download-48.png",
+    "128": "/images/shopify-product-download-128.png"
+  }
+}
